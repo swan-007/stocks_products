@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 
-from logistic.views import ProductViewSet, StockViewSet
+from logistic.views import ProductViewSet, StockViewSet, sample_view
 
 r = routers.DefaultRouter()
 r.register(r'product', ProductViewSet)
@@ -27,4 +27,5 @@ r.register(r'stock', StockViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(r.urls)),
+    path('api/v1/test/', sample_view)
 ]
