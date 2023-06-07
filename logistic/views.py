@@ -26,5 +26,5 @@ class StockViewSet(ModelViewSet):
 def sample_view(request):
     text = '''Этот текст предназначен для проверки того,
     что мы сделали всё правильно'''
-    return Response('жопа')
+    return Response(text)
 
