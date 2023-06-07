@@ -7,13 +7,12 @@ from rest_framework.viewsets import ModelViewSet
 from .models import Stock, Product
 from .serializers import ProductSerializer, StockSerializer
 
+
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [SearchFilter]
     search_fields = ['title', 'description']
-
-
 
 
 
@@ -23,8 +22,10 @@ class StockViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['products']
 
+
 @api_view(['GET'])
 def sample_view(request):
     text = '''Этот текст предназначен для проверки того,
     что мы сделали всё правильно'''
     return Response(text)
+
