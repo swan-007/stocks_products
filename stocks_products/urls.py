@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 
-from .views import ProductViewSet, StockViewSet, sample_view
+from logistic.views import ProductViewSet, StockViewSet, sample_view
 
 r = routers.DefaultRouter()
 r.register(r'product', ProductViewSet)
