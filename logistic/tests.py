@@ -4,7 +4,7 @@ from unittest import TestCase
 
 class SampleTestCase(TestCase):
     def test_successful_request(self):
-        url = '/api/v1/test/'
+        url = '/api/v3/'
         client = APIClient()
         response = client.get(url)
         self.assertEqual(response.status_code, 200)
